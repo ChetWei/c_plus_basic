@@ -31,7 +31,7 @@ void test2() {
     cout << "sum: " << sum << endl;
 }
 
-
+//测试不可修改数组
 void testNoChange() {
     int cookies[ArSize] = {1, 2, 4, 8, 16, 32, 64, 128};
     nochange_arr(cookies);
@@ -73,3 +73,33 @@ int nochange_arr(const int arr[]) {
     return 0;
 }
 
+
+// 指针和const的关系
+void test3(){
+    //1、指针指向常量对象，防止使用指针来修改所指向的值
+    // 指向const的指针
+    int age = 39;
+    //这里pt 指向一个 const int 因此不能用pt来修改它的值
+    //要注意的是pt的声明，不表示 age就是一个常量，只是对pt指针而言，这个值是一个常量
+    //可以用age修改值，但是不能通过 pt来修改
+    const int *pt = &age ;
+//    *pt = 100; //这将是不允许的
+
+    const float g_moon = 1.63;
+    //将一个const常量的地址赋值给一个非const常量的指针，也是不允许的
+    //这意味着无法通过 g_moon 本身修改值，但是可以通过指针修改，  荒谬
+//    float *pm = &g_moon;
+
+
+
+
+    //2、将指针本身声明为常量，防止改变指针指向的位置
+    // const 指针
+    int * const ps = &age; //这里的ps指针 只能指向 age的地址
+
+    //3.指向const对象的const指针
+    double t = 2.33;
+    //ptt只能指向t，而且ptt不能用来修改t的值
+    const double * const ptt = &t;
+
+}

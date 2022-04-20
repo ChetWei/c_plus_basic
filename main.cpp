@@ -13,7 +13,16 @@
 
 //#include "06分支语句和逻辑运算符/08简单文件输入输出.h"
 
-#include "07函数/03函数和数组.h"
+//#include "07函数/03函数和数组.h"
+//#include "07函数/04函数和二维数组.h"
+//#include "07函数/05函数和c风格字符串.h"
+//#include "07函数/06函数与结构.h"
+//#include "07函数/07函数和string对象.h"
+//#include "07函数/08函数与array对象.h"
+//#include "07函数/09递归.h"
+#include "07函数/10函数指针.h"
+
+
 int main() {
 
     test2();
