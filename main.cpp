@@ -20,12 +20,16 @@
 //#include "07函数/07函数和string对象.h"
 //#include "07函数/08函数与array对象.h"
 //#include "07函数/09递归.h"
-#include "07函数/10函数指针.h"
+//#include "07函数/10函数指针.h"
 
+//#include "08函数探幽/01内联函数.h"
+//#include "08函数探幽/02引用变量.h"
+//#include "08函数探幽/03默认参数.h"
+#include "08函数探幽/05函数模板.h"
 
 int main() {
 
-    test2();
+    test();
 
     return 0;
 }
