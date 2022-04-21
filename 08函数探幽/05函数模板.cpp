@@ -99,23 +99,22 @@ struct job {
     int floor;
 };
 
-//声明函数原型 #1
-void Swapnew(job &, job &); //引用job类型参数，省略了参数的名字
-
-template<typename T>
-void Swapnew(T &, T &);  //#2
-
-// 显示具体化模板 定义使用 template<> 开头 通过名称指定类型
-template<>
-void Swapnew<job>(job &, job &); //#3
-
-void test3() {
-    double u, v;
-    Swapnew(u, v);  //使用模板2
-
-    job a, b;
-    Swapnew(a, b);  //选择模板 3，因为具体类型匹配
-}
+////声明函数原型 #1
+//void Swapnew(job &, job &); //引用job类型参数，省略了参数的名字
+//
+//template<typename T>
+//void Swapnew(T &, T &);  //#2
+//
+//// 显示具体化模板 定义使用 template<> 开头 通过名称指定类型
+//template<> void Swapnew<job>(job &, job &); //#3
+//
+//void test3() {
+//    double u, v;
+//    Swapnew(u, v);  //使用模板2
+//
+//    job a, b;
+//    Swapnew(a, b);  //选择模板 3，因为具体类型匹配
+//}
 
 /**************************4.实例化和具体化*************************/
 //编译器使用模板为特定类型生成函数定义时，得到的是模板实例
