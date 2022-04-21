@@ -6,13 +6,15 @@ using namespace std;
 
 template <class T> //定义一个泛型为T
 //template <template T> //定义一个泛型为T
-
 void myswap(T &a, T &b) {
     T temp;
     temp = a;
     a = b;
     b = temp;
 }
+
+
+
 
 void test(){
     int i = 10;
