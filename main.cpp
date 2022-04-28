@@ -24,11 +24,10 @@
 //#include "08函数探幽/01内联函数.cpp"
 //#include "08函数探幽/02引用变量.cpp"
 //#include "08函数探幽/03默认参数.cpp"
-#include "08函数探幽/05函数模板.cpp"
+//#include "08函数探幽/05函数模板.cpp"
+
 
 int main() {
-
-    test();
 
     return 0;
 }
