@@ -2,6 +2,8 @@
 #include <iostream>
 #include "mytime0.h"
 
+//使用重载运算符
+
 int main() {
     using std::cout;
     using std::endl;
@@ -25,4 +27,6 @@ int main() {
     total = coding + fixing; //直接相加等于上面的效果
     cout << "total time = ";
     total.Show();
+
+    cout << total; //使用Time重载了的 <<
 }
