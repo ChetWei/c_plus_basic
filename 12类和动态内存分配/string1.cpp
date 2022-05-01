@@ -73,6 +73,7 @@ const char &String::operator[](int i) const {
 
 //友元函数重载 运算符
 bool operator<(const String &st1, const String &st2) {
+    //strcmp("a","b")  返回 -1
     return (std::strcmp(st1.str, st2.str) < 0);
 }
 
@@ -84,14 +85,16 @@ bool operator==(const String &st1, const String &st2) {
     return (std::strcmp(st1.str, st2.str) == 0);
 }
 
-ostream& operator<<(ostream &ostream, const String &st) {
+
+ostream &operator<<(ostream &ostream, const String &st) {
     ostream << st.str;
     return ostream;
 }
 
-istream& operator>>(istream &istream, String &st) {
+
+istream &operator>>(istream &istream, String &st) {
     char temp[String::CINLIM];
-    istream.get(temp, String::CINLIM);
+    istream.get(temp, String::CINLIM); //获取用户输入
     if (istream) {
         st = temp;
     }

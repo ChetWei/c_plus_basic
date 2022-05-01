@@ -47,7 +47,7 @@ public:
 
     friend istream & operator>>(istream &istream, String &st);
 
-    //静态方法
+    //静态方法 可以通过类名直接调用，静态方法里面只能使用静态成员
     static int HowManyInstance();
 
 };
