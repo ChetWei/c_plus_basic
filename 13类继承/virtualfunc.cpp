@@ -20,10 +20,10 @@ public:
 
 class B : public A {
 public:
-    void foo() {
+    void foo() { // 隐藏：派生类的同名函数屏蔽了与其同名的基类函数
         cout << "B:foo" << endl;
     }
-    virtual void fun() {
+    void fun() { //多态覆盖
         cout << "B:fun" << endl;
     }
 };
